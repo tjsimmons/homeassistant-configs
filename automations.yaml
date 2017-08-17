@@ -1,0 +1,58 @@
+- alias: "Back Door unlocked"
+  trigger:
+    platform: state
+    entity_id: lock.back_door_locked
+    from: "locked"
+    to: "unlocked"
+  action:
+    service: notify.ios_gylfaginning
+    data: 
+      message: "Back Door unlocked"
+
+- alias: "Back Door locked"
+  trigger:
+    platform: state
+    entity_id: lock.back_door_locked
+    from: "unlocked"
+    to: "locked"
+  action:
+    service: notify.ios_gylfaginning
+    data:
+      message: "Back Door locked"
+
+- alias: "Front Door unlocked"
+  trigger:
+    platform: state
+    entity_id: lock.front_door_locked
+    from: "locked"
+    to: "locked"
+  action:
+    service: notify.ios_gylfaginning
+    data:
+      message: "Front Door unlocked"
+
+- alias: "Front Door locked"
+  trigger:
+    platform: state
+    entity_id: lock.front_door_locked
+    from: "unlocked"
+    to: "locked"
+  action:
+    service: notify.ios_gylfaginning
+    data:
+      message: "Front Door locked"
+
+- alias: "Front Door Unlocked 30 minutes"
+  trigger:
+    platform: state
+    entity_id: lock.front_door_locked
+    from: "locked"
+    to: "unlocked"
+    for: 
+      minutes: 2
+  action:
+    - service: lock.lock
+      entity_id: lock.front_door_locked
+    - service: notify.ios_gylfaginning
+      data:
+        message: "Front Door has been left unlocked; automatically locking"
