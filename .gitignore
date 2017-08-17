@@ -1,3 +1,12 @@
 syntax: glob
 *.DS_Store
-*secrets.yaml
+secrets.yaml
+.HA_VERSION
+.ios.conf
+.uuid
+*.txt
+*.log
+*.db
+known_devices.yaml
+*.sqlite
+*.xml
