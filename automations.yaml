@@ -56,3 +56,12 @@
     - service: notify.ios_gylfaginning
       data:
         message: "Front Door has been left unlocked; automatically locking"
+
+- alias: "Lock all doors at 10pm"
+  trigger:
+    platform: time
+    at: "18:00:00"
+  action:
+    service: lock.lock
+    entity_id: lock.all_locks
+
