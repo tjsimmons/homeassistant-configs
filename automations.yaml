@@ -1,4 +1,5 @@
 - alias: "Back Door unlocked"
+  hide_entity: true
   trigger:
     platform: state
     entity_id: lock.back_door_locked
@@ -10,6 +11,7 @@
       message: "Back Door unlocked"
 
 - alias: "Back Door locked"
+  hide_entity: true
   trigger:
     platform: state
     entity_id: lock.back_door_locked
@@ -21,6 +23,7 @@
       message: "Back Door locked"
 
 - alias: "Front Door unlocked"
+  hide_entity: true
   trigger:
     platform: state
     entity_id: lock.front_door_locked
@@ -32,6 +35,7 @@
       message: "Front Door unlocked"
 
 - alias: "Front Door locked"
+  hide_entity: true
   trigger:
     platform: state
     entity_id: lock.front_door_locked
@@ -43,6 +47,7 @@
       message: "Front Door locked"
 
 - alias: "Front Door Unlocked 30 minutes"
+  hide_entity: true
   trigger:
     platform: state
     entity_id: lock.front_door_locked
@@ -58,6 +63,7 @@
         message: "Front Door has been left unlocked; automatically locking"
 
 - alias: "Lock all doors at 10pm"
+  hide_entity: true
   trigger:
     platform: time
     at: "18:00:00"
