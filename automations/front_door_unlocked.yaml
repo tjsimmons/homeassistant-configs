@@ -1,0 +1,11 @@
+alias: "Front Door unlocked"
+hide_entity: true
+trigger:
+  platform: state
+  entity_id: lock.front_door_locked
+  from: "locked"
+  to: "locked"
+action:
+  service: notify.ios_gylfaginning
+  data:
+    message: "Front Door unlocked"

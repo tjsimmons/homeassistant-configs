@@ -1,0 +1,15 @@
+alias: "Front Door Unlocked 30 minutes"
+hide_entity: true
+trigger:
+  platform: state
+  entity_id: lock.front_door_locked
+  from: "locked"
+  to: "unlocked"
+  for: 
+    minutes: 30
+action:
+  - service: lock.lock
+    entity_id: lock.front_door_locked
+  - service: notify.ios_gylfaginning
+    data:
+      message: "Front Door has been left unlocked; automatically locking"

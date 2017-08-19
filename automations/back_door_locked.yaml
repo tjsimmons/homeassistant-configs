@@ -1,0 +1,11 @@
+alias: "Back Door locked"
+hide_entity: true
+trigger:
+  platform: state
+  entity_id: lock.back_door_locked
+  from: "unlocked"
+  to: "locked"
+action:
+  service: notify.ios_gylfaginning
+  data:
+    message: "Back Door locked"

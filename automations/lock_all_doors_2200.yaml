@@ -1,0 +1,8 @@
+alias: "Lock all doors at 10pm"
+hide_entity: true
+trigger:
+  platform: time
+  at: "08:30:00"
+action:
+  service: lock.lock
+  entity_id: group.all_locks
