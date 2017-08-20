@@ -1,6 +1,6 @@
 turn_playroom_off:
   sequence:
-    - service: switch.turn_off
+    - service: homeassistant.turn_off
       entity_id:
         - switch.playroom_fan_lights_switch
         - switch.playroom_main_lights_switch
