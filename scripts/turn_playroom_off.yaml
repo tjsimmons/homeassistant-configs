@@ -1,5 +1,4 @@
 turn_playroom_off:
-  hide_entity: true
   sequence:
     - service: notify.ios_gylfaginning
       data:
