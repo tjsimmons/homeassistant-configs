@@ -1,0 +1,5 @@
+playroom:
+  - fan.playroom_fan
+  - switch.playroom_fan_lights
+  - switch.playroom_main_lights
+  - switch.playroom_tv
