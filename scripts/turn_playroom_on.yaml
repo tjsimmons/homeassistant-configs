@@ -1,4 +1,4 @@
-turn_playroom_off:
+turn_playroom_on:
   sequence:
     - service: switch.turn_on
       entity_id:
