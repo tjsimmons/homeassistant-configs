@@ -1,0 +1,8 @@
+alias: "Set house to night"
+hide_entity: true
+trigger:
+  platform: time
+  at: "22:00:00"
+action:
+  - service: lock.lock      # not specifying entity_id applies this to all locks
+  - service: script.turn_playroom_off

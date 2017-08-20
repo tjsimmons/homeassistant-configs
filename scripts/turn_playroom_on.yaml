@@ -1,6 +1,6 @@
 turn_playroom_off:
   sequence:
-    - service: switch.turn_off
+    - service: switch.turn_on
       entity_id:
         - switch.playroom__fan_lights_switch
         - switch.playroom__main_lights_switch
