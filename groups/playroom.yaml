@@ -1,6 +1,0 @@
-playroom:
-  name: Playroom
-  - fan.playroom_fan_level
-    #- switch.playroom_fan_lights
-    #- switch.playroom_main_lights
-    #- switch.playroom_tv

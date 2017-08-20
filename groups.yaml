@@ -1,0 +1,4 @@
+playroom:
+  name: Playroom
+  entities:
+    - fan.playroom_fan_switch

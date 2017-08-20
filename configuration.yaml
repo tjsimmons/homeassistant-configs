@@ -60,7 +60,7 @@ zwave:
   usb_path: /dev/zwave
   network_key: !secret zwave_key
 
-group: !include_dir_list groups
+group: !include groups.yaml
 automation: !include_dir_list automations
 
 switch: !include devices/switches.yaml
