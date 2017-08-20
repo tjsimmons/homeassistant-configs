@@ -1,4 +1,8 @@
 playroom:
   name: Playroom
+  view: yes
   entities:
     - fan.playroom_fan_switch
+    - switch.playroom_fan_lights_switch
+    - switch.playroom_main_lights_switch
+    - switch.playroom_tv_switch
