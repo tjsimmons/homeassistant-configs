@@ -4,9 +4,12 @@ trigger:
   entity_id: binary_sensor.playroom__motion_sensor
   from: "on"
   to: "off"
-  condition:
-    # only fire if off for 30 minutes
-    condition: state
-    state: "off"
-    for:
-      minutes: 30
+condition:
+  # only fire if off for 30 minutes
+  condition: state
+  entity_id: binay_sensor.playroom__motion_sensor
+  state: "off"
+  for:
+    minutes: 30
+action:
+  service: script.turn_playroom_off
