@@ -62,6 +62,7 @@ zwave:
 
 group: !include groups.yaml
 automation: !include_dir_list automations
+script: !include scripts.yaml
 
 switch: !include devices/switches.yaml
 lock: !include devices/locks.yaml
