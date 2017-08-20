@@ -2,10 +2,10 @@ turn_playroom_off:
   sequence:
     - service: homeassistant.turn_off
       entity_id:
-        - switch.playroom_fan_lights_switch
-        - switch.playroom_main_lights_switch
-        - switch.playroom_tv_switch
+        - switch.playroom__fan_lights_switch
+        - switch.playroom__main_lights_switch
+        - switch.playroom__tv_switch
     - service: fan.set_speed
-      entity_id: fan.playroom_fan_level
+      entity_id: fan.playroom__fan_level
       data:
         speed: medium
