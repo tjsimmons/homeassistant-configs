@@ -1,0 +1,11 @@
+alias: "Playroom motion detected"
+trigger:
+  platform: state
+  entity_id: binary_sensor.playroom__motion_sensor
+  from: "off"
+  to: "on"
+action:
+  - service: script.turn_playroom_on
+  - service: notify_ios.gylfaginning
+    data:
+      message: "Turning playroom on"
