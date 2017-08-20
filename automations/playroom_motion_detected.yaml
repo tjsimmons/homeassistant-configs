@@ -6,6 +6,3 @@ trigger:
   to: "on"
 action:
   - service: script.turn_playroom_on
-  - service: notify_ios.gylfaginning
-    data:
-      message: "Turning playroom on"

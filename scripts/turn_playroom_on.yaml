@@ -1,5 +1,8 @@
 turn_playroom_on:
   sequence:
+    - service: notify.ios_gylfaginning
+      data:
+        message: "Turning playroom on"
     - service: switch.turn_on
       entity_id:
         - switch.playroom__fan_lights_switch
