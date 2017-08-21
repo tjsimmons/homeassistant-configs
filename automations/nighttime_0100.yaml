@@ -1,0 +1,10 @@
+alias: "Nighttime 1 AM"
+hide_entity: true
+platform: time
+  at: "01:00:00"
+action:
+  - service: climate.set_temperature
+    entity_id: climate.downstairs_thermostat_cooling_1
+    data:
+      temperature: 71
+  - service: lock.lock

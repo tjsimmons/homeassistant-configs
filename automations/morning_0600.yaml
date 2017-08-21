@@ -1,0 +1,9 @@
+alias: "Morning 6 AM"
+hide_entity: true
+platform: time
+  at: "06:00:00"
+action:
+  service: climate.set_temperature
+  entity_id: climate.downstairs_thermostat_cooling_1
+  data:
+    temperature: 69
