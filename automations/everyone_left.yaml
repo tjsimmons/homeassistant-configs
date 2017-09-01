@@ -1,0 +1,16 @@
+alias: "Everyone left"
+hide_entity: true
+trigger:
+  platform: state
+  entity_id: group.all_devices
+  to: "not_home"
+action:
+  - service: notify.ios_gylfaginning
+    data:
+      message: "Everyone left"
+  - service: lock.lock
+  - service: script.turn_playroom_off
+  - service: climate.set_temperature
+    entity_id: climate.downstairs_thermostat_cooling_1
+    data:
+      temperature: 73

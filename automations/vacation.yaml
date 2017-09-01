@@ -1,0 +1,18 @@
+alias: "Vacation"
+hide_entity: true
+trigger:
+  platform: state
+  entity_id: group.all_devices
+  to: "not_home"
+  for:
+    hours: 8
+action:
+  - service: notify.ios_gylfaginning
+    data:
+      message: "Vacation"
+  - service: lock.lock
+  - service: script.turn_playroom_off
+  - service: climate.set_temperature
+    entity_id: climate.downstairs_thermostat_cooling_1
+    data:
+      temperature: 76

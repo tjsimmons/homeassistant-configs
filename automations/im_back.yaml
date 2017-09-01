@@ -1,0 +1,14 @@
+alias: "I'm back"
+hide_entity: true
+trigger:
+  platform: state
+  entity_id: device_tracker.gylfaginning, device_tracker.kristens_iphone
+  to: "home"
+action:
+  - service: notify.ios_gylfaginning
+    data:
+      message: "I'm back"
+  - service: climate.set_temperature
+    entity_id: climate.downstairs_thermostat_cooling_1
+    data:
+      temperature: 69
