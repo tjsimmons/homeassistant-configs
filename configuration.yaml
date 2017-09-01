@@ -39,7 +39,7 @@ updater:
 discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
+#conversation:
 
 # Enables support for tracking state changes over time
 history:
@@ -59,6 +59,14 @@ ios:
 zwave:
   usb_path: /dev/zwave
   network_key: !secret zwave_key
+
+device_tracker:
+  - platform: unifi
+    username: !secret unifi_user
+    password: !secret unifi_pass
+    host: unifi
+    verify_ssl: false
+
 
 group: !include groups.yaml
 automation: !include_dir_list automations
