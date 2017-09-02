@@ -4,6 +4,8 @@ trigger:
   platform: state
   entity_id: group.all_devices
   to: "not_home"
+  for:
+    hours: 1
 action:
   - service: notify.ios_gylfaginning
     data:
