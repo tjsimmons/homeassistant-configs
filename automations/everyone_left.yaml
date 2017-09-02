@@ -7,7 +7,7 @@ trigger:
 action:
   - service: notify.ios_gylfaginning
     data:
-      message: "Everyone left"
+      message: "Everyone left; setting house to away"
   - service: lock.lock
   - service: script.turn_playroom_off
   - service: climate.set_temperature

@@ -4,10 +4,16 @@ trigger:
   platform: state
   entity_id: device_tracker.gylfaginning, device_tracker.kristens_iphone
   to: "home"
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: group.all_devices
+      state: "not_home"
 action:
   - service: notify.ios_gylfaginning
-    data:
-      message: "I'm back"
+    data_template:
+      message: "{{ trigger.entity_id }} is back"
   - service: climate.set_temperature
     entity_id: climate.downstairs_thermostat_cooling_1
     data:
