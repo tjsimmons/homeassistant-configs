@@ -3,6 +3,10 @@ hide_entity: true
 trigger:
   platform: time
   at: "22:00:00"
+condition:
+  condition: state
+  entity_id: input_boolean.vacation_mode
+  state: "off"
 action:
   - service: lock.lock      # not specifying entity_id applies this to all locks
   - service: script.turn_playroom_off

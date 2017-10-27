@@ -16,3 +16,6 @@ action:
     entity_id: climate.downstairs_thermostat_cooling_1
     data:
       temperature: 76
+  - service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.vacation_mode
