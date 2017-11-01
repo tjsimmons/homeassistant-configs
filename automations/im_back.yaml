@@ -18,6 +18,10 @@ action:
     entity_id: climate.downstairs_thermostat_cooling_1
     data:
       temperature: 69
+  - service: climate.set_temperature
+    entity_id: climate.downstairs_thermostat_heating_1
+    data:
+      temperature: 68
   - service: input_boolean.turn_off
     data:
       entity_id: input_boolean.vacation_mode

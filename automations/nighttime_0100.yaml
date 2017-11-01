@@ -12,4 +12,8 @@ action:
     entity_id: climate.downstairs_thermostat_cooling_1
     data:
       temperature: 71
+  - service: climate.set_temperature
+    entity_id: climate.downstairs_thermostat_heating_1
+    data:
+      temperature: 66
   - service: lock.lock
