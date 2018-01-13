@@ -68,6 +68,7 @@ device_tracker:
     verify_ssl: false
     track_new_devices: false
   - platform: nmap_tracker
+    scan_options: " --privileged -n -sn"
     hosts: !secret nmap_hosts
 
 input_boolean:
