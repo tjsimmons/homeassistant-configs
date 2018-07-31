@@ -4,6 +4,7 @@ trigger:
   platform: state
   entity_id: device_tracker.gylfaginning, device_tracker.kristensiphone
   to: "home"
+  from: "not_home"
 action:
   - service: notify.ios_gylfaginning
     data_template:
