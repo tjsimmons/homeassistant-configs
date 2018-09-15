@@ -11,3 +11,5 @@ known_devices.yaml
 *.sqlite
 *.xml
 *.conf
+.storage/
+deps/

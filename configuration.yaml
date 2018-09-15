@@ -10,12 +10,20 @@ homeassistant:
   unit_system: imperial
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Chicago
+  auth_providers:
+    - type: homeassistant
+    - type: legacy_api_password
+
+auth:
 
 http:
   api_password: !secret http_password
   use_x_forwarded_for: True
   ip_ban_enabled: True
   login_attempts_threshold: 3
+  trusted_proxies:
+    - 127.0.0.1
+    - ::1
 
 # Show links to resources in log and frontend
 #introduction:
@@ -67,6 +75,8 @@ device_tracker:
     host: unifi
     verify_ssl: false
     track_new_devices: false
+    ssid_filter:
+      - "Heimdall"
   - platform: nmap_tracker
     scan_options: " --privileged -n -sn"
     hosts: !secret nmap_hosts
