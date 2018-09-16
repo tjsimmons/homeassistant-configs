@@ -1,19 +1,14 @@
 alias: "I'm back"
 hide_entity: true
+trigger:
+  platform: state
+  entity_id: device_tracker.gylfaginning, device_tracker.kristensiphone
+  to: "home"
+  from: "not_home"
 condition:
-  condition: or
-  conditions:
-    - condition: state
-      entity_id: device_tracker.gylfaginning
-      state: "home"
-    - condition: state
-      entity_id: device_tracker.kristensiphone
-      state: "home"
-  condition: and
-  conditions:
-    - condition: state
-      entity_id: input_boolean.device_away
-      state: on
+  - condition: state
+    entity_id: input_boolean.device_away
+    state: on
 action:
   - service: notify.ios_gylfaginning
     data_template:
