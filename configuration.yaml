@@ -86,6 +86,9 @@ input_boolean:
     name: Vacation Mode
     initial: off
     icon: mdi:house-map-marker
+  device_away:
+    name: Device Away
+    initial: off
 
 group: !include groups.yaml
 automation: !include_dir_list automations

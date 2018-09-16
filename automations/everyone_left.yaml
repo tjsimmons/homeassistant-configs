@@ -20,3 +20,6 @@ action:
     entity_id: climate.downstairs_thermostat_heating_1
     data:
       temperature: 64
+  - service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.device_away
