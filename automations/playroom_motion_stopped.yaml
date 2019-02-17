@@ -2,7 +2,7 @@ alias: "No playroom motion"
 hide_entity: true
 trigger:
   platform: state
-  entity_id: binary_sensor.playroom__motion_sensor
+  entity_id: binary_sensor.playroom_motion_sensor
   from: "on"
   to: "off"
   for:
