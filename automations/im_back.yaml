@@ -2,7 +2,7 @@ alias: "I'm back"
 hide_entity: true
 trigger:
   platform: state
-  entity_id: device_tracker.gylfaginning, device_tracker.kristensiphone
+  entity_id: device_tracker.gylfaginning, device_tracker.kristens_iphone
   to: "home"
   from: "not_home"
 condition:
