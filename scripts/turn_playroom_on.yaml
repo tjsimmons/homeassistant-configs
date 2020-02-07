@@ -5,10 +5,10 @@ turn_playroom_on:
         message: "Turning playroom on"
     - service: switch.turn_on
       entity_id:
-        - switch.playroom_fan_lights_switch
-        - switch.playroom_main_lights_switch
-        - switch.playroom_tv_switch
+        - zwave.playroom_fan_lights
+        - zwave.playroom_main_lights
+        - zwave.playroom_tv
     - service: fan.set_speed
-      entity_id: fan.playroom_fan_level
+      entity_id: zwave.playroom_fan
       data:
         speed: medium
